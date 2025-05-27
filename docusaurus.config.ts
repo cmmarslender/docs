@@ -64,7 +64,7 @@ const config: Config = {
           items: [
             {
               label: "Sage",
-              href: "/docs/sage",
+              href: "/docs",
             },
             {
               label: "Wallet SDK",
