@@ -1,7 +1,8 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 const sidebars: SidebarsConfig = {
-  tutorialSidebar: ["intro"],
+  sageSidebar: ["sage/index"],
+  sdkSidebar: ["sdk/index"],
 };
 
 export default sidebars;

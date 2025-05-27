@@ -4,9 +4,9 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
   title: "xch.dev",
-  tagline: "Dinosaurs are cool",
+  tagline: "Build our decentralized future on the Chia blockchain",
   favicon: "img/favicon.ico",
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://xch.dev",
   baseUrl: "/",
   organizationName: "xch-dev",
   projectName: "docs",
@@ -40,9 +40,15 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          sidebarId: "sageSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "Sage",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "sdkSidebar",
+          position: "left",
+          label: "Wallet SDK",
         },
         {
           href: "https://github.com/xch-dev/docs",
@@ -55,20 +61,20 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Wallet SDK",
+          title: "Learn",
           items: [
             {
-              label: "Docs",
-              href: "/docs/intro",
+              label: "Sage",
+              href: "/docs/sage",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/xch-dev/chia-wallet-sdk",
+              label: "Wallet SDK",
+              href: "/docs/sdk",
             },
           ],
         },
         {
-          title: "Sage",
+          title: "Social",
           items: [
             {
               label: "Discord",
@@ -78,18 +84,22 @@ const config: Config = {
               label: "X",
               href: "https://x.com/sage_wallet",
             },
-            {
-              label: "GitHub",
-              href: "https://github.com/xch-dev/sage",
-            },
           ],
         },
         {
-          title: "More",
+          title: "Contribute",
           items: [
             {
-              label: "Docs Repo",
+              label: "Website GitHub",
               href: "https://github.com/xch-dev/docs",
+            },
+            {
+              label: "Wallet SDK GitHub",
+              href: "https://github.com/xch-dev/chia-wallet-sdk",
+            },
+            {
+              label: "Sage GitHub",
+              href: "https://github.com/xch-dev/sage",
             },
           ],
         },
