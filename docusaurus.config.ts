@@ -63,12 +63,12 @@ const config: Config = {
           title: "Learn",
           items: [
             {
-              label: "Sage",
-              href: "/docs",
+              label: "Chia Docs",
+              href: "https://docs.chia.net",
             },
             {
-              label: "Wallet SDK",
-              href: "/docs/sdk",
+              label: "Chialisp Docs",
+              href: "https://chialisp.com",
             },
           ],
         },
@@ -89,15 +89,11 @@ const config: Config = {
           title: "Contribute",
           items: [
             {
-              label: "Website GitHub",
-              href: "https://github.com/xch-dev/docs",
-            },
-            {
-              label: "Wallet SDK GitHub",
+              label: "Wallet SDK",
               href: "https://github.com/xch-dev/chia-wallet-sdk",
             },
             {
-              label: "Sage GitHub",
+              label: "Sage",
               href: "https://github.com/xch-dev/sage",
             },
           ],

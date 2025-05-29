@@ -2,8 +2,71 @@
 slug: /
 ---
 
-# Sage Wallet
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-Sage is a fully featured Chia wallet built on top of the Wallet SDK. In addition to a desktop and mobile app, it provides a WalletConnect API for dApp integration, and an RPC interface for scripting. The RPC API allows you to do everything you can do with the GUI, and it can be used via HTTP or the CLI interface.
+# Getting Started
 
-If you're looking for a simple API to automate actions on the wallet's behalf, you should start by using the Sage RPC. However, if you are contributing to Sage or want to build your own standalone wallet app, you may need the flexibility provided by the Wallet SDK (which comes at the cost of complexity).
+The goal of this website is to provide documentation for Sage and the Wallet SDK it's built with. It will cover a wide range of topics, from configuring and using Sage and its RPCs to building your own applications that utilize the Wallet SDK library to connect to the Chia blockchain.
+
+:::note
+If you are looking for download instructions for the app, visit the [Sage Website](https://sagewallet.net).
+:::
+
+## Source Installation
+
+Sage is built with [Tauri v2](https://tauri.app/), a framework for building efficient cross-platform applications that work on both desktop and mobile devices. You will need to follow the [Prerequisites](https://tauri.app/start/prerequisites/) section of the Tauri docs before proceeding with a source installation.
+
+You will also need to have both [Rustup](https://rustup.rs/) and [PNPM](https://pnpm.io/installation) installed.
+
+Clone the repo and run the following command to install the frontend dependencies:
+
+```bash
+pnpm install
+```
+
+This is how you can compile and start the app in debug mode, for development or testing purposes:
+
+<Tabs groupId="tauri-builds">
+  <TabItem value="desktop" label="Desktop">
+  ```bash
+  pnpm tauri dev
+  ```
+  </TabItem>
+  <TabItem value="ios" label="iOS">
+  ```bash
+  pnpm tauri ios dev
+  ```
+  </TabItem>
+  <TabItem value="android" label="Android">
+  ```bash
+  pnpm tauri android dev
+  ```
+  </TabItem>
+</Tabs>
+
+:::note
+This will create an unoptimized build of the app, which can result in some performance issues. If needed, you can use the `--release` flag to run a release optimized version instead.
+:::
+
+### Production Build
+
+If you need to compile the app into a production binary, you can do that as well:
+
+<Tabs groupId="tauri-builds">
+  <TabItem value="desktop" label="Desktop">
+  ```bash
+  pnpm tauri build
+  ```
+  </TabItem>
+  <TabItem value="ios" label="iOS">
+  ```bash
+  pnpm tauri ios build
+  ```
+  </TabItem>
+  <TabItem value="android" label="Android">
+  ```bash
+  pnpm tauri android build
+  ```
+  </TabItem>
+</Tabs>
