@@ -223,6 +223,9 @@ This file provides a list of wallet objects, each prefixed with `[[wallets]]`. T
 For example:
 
 ```toml
+[defaults]
+delta_sync = true
+
 [defaults.change]
 mode = "same"
 
@@ -235,6 +238,10 @@ name = "Main"
 fingerprint = 1239439275
 network = "mainnet"
 ```
+
+### defaults.delta_sync
+
+Delta sync is enabled by default. During initial sync, the wallet will use a peer to subscribe to each of its p2 puzzle hashes (addresses) and coin ids. If delta sync is enabled, it will start from the previous peak height instead of downloading all of the coins every time. This is an optimization, but it can lead to data loss if a race condition occurs - for example, if a p2 puzzle hash or coin id is inserted into the database but the app is restarted before it finishes syncing it. In the case of lost data, a resync is required.
 
 ### defaults.change
 
@@ -285,6 +292,15 @@ This fingerprint is used for internal identification purposes, and is not consid
 ```toml
 [[wallets]]
 fingerprint = 1239439275
+```
+
+### delta_sync
+
+This is a per-wallet override for `defaults.delta_sync`, although it's not currently exposed to the UI to reduce complexity:
+
+```toml
+[[wallets]]
+delta_sync = false
 ```
 
 ### change

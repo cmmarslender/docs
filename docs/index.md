@@ -1,5 +1,5 @@
 ---
-slug: /
+slug: /getting-started
 ---
 
 import Tabs from '@theme/Tabs';

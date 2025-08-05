@@ -1,5 +1,0 @@
----
-slug: /sdk
----
-
-# Wallet SDK

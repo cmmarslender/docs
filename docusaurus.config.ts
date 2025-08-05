@@ -22,6 +22,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+          routeBasePath: "",
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -39,15 +40,9 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "sageSidebar",
+          sidebarId: "sidebar",
           position: "left",
-          label: "Sage",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "sdkSidebar",
-          position: "left",
-          label: "Wallet SDK",
+          label: "Docs",
         },
         {
           href: "https://github.com/xch-dev/docs",
